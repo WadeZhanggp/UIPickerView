@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TSIPickerViewDelegate <NSObject>
+
+- (void)certainActionWithStalls:(NSString *)stall;
+
+@end
+
 @interface TSIPickerView : UIView
+
+@property (nonatomic, weak) id<TSIPickerViewDelegate>delegate;
 
 /*!
  显示PickerView,并设置默认行数

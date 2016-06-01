@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "TSIPickerView.h"
 
-@interface ViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
+@interface ViewController ()<UIPickerViewDelegate,UIPickerViewDataSource,TSIPickerViewDelegate>
 
 @property (nonatomic, strong) UIPickerView *pickerView;
 
@@ -75,7 +75,12 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     TSIPickerView *pickerView = [[TSIPickerView alloc] initWithFrame:self.view.bounds];
+    pickerView.delegate = self;
     [pickerView show:self.view withRow:1];
+}
+
+- (void)certainActionWithStalls:(NSString *)stall{
+    NSLog(@"最终确定的档位是：%@",stall);
 }
 
 @end

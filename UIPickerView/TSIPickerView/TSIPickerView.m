@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UIPickerView *pickerView;
 @property (nonatomic, strong) UIButton *blackView;
 @property (nonatomic, strong) NSArray *teams;
+@property (nonatomic, copy) NSString *currentStall;
 
 @end
 
@@ -105,6 +106,15 @@
     NSLog(@"确定");
     [self clickCancel];
     
+    if (self.currentStall == nil) {
+        return;
+    }
+    
+    if (self.currentStall && self.delegate && [self.delegate respondsToSelector:@selector(certainActionWithStalls:)]) {
+        [self.delegate certainActionWithStalls:self.currentStall];
+    }
+
+    
 }
 
 //UIPickerViewDataSource中定义的方法，该方法的返回值决定该控件包含的列数
@@ -137,6 +147,26 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     
     NSLog(@"选中档位：%ld档",(long)row);
+    switch (row) {
+        case 0:
+            self.currentStall = @"0";
+            break;
+            
+        case 1:
+            self.currentStall = @"1";
+            break;
+            
+        case 2:
+            self.currentStall = @"2";
+            break;
+            
+        case 3:
+            self.currentStall = @"s";
+            break;
+            
+        default:
+            break;
+    }
     
 }
 
