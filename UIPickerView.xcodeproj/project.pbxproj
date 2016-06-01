@@ -15,6 +15,7 @@
 		39F0D82B1CFD2FBC00CA4AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F0D8291CFD2FBC00CA4AEA /* LaunchScreen.storyboard */; };
 		39F0D8361CFD2FBC00CA4AEA /* UIPickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F0D8351CFD2FBC00CA4AEA /* UIPickerViewTests.m */; };
 		39F0D8411CFD2FBC00CA4AEA /* UIPickerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F0D8401CFD2FBC00CA4AEA /* UIPickerViewUITests.m */; };
+		39F0D8511CFD870400CA4AEA /* TSIPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F0D8501CFD870400CA4AEA /* TSIPickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		39F0D83C1CFD2FBC00CA4AEA /* UIPickerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIPickerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F0D8401CFD2FBC00CA4AEA /* UIPickerViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPickerViewUITests.m; sourceTree = "<group>"; };
 		39F0D8421CFD2FBC00CA4AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39F0D84F1CFD870400CA4AEA /* TSIPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSIPickerView.h; sourceTree = "<group>"; };
+		39F0D8501CFD870400CA4AEA /* TSIPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSIPickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 				39F0D81F1CFD2FBC00CA4AEA /* AppDelegate.m */,
 				39F0D8211CFD2FBC00CA4AEA /* ViewController.h */,
 				39F0D8221CFD2FBC00CA4AEA /* ViewController.m */,
+				39F0D84E1CFD86D600CA4AEA /* TSIPickerView */,
 				39F0D8241CFD2FBC00CA4AEA /* Main.storyboard */,
 				39F0D8271CFD2FBC00CA4AEA /* Assets.xcassets */,
 				39F0D8291CFD2FBC00CA4AEA /* LaunchScreen.storyboard */,
@@ -138,6 +142,15 @@
 				39F0D8421CFD2FBC00CA4AEA /* Info.plist */,
 			);
 			path = UIPickerViewUITests;
+			sourceTree = "<group>";
+		};
+		39F0D84E1CFD86D600CA4AEA /* TSIPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				39F0D84F1CFD870400CA4AEA /* TSIPickerView.h */,
+				39F0D8501CFD870400CA4AEA /* TSIPickerView.m */,
+			);
+			path = TSIPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +286,7 @@
 				39F0D8231CFD2FBC00CA4AEA /* ViewController.m in Sources */,
 				39F0D8201CFD2FBC00CA4AEA /* AppDelegate.m in Sources */,
 				39F0D81D1CFD2FBC00CA4AEA /* main.m in Sources */,
+				39F0D8511CFD870400CA4AEA /* TSIPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +512,7 @@
 				39F0D8471CFD2FBC00CA4AEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39F0D8481CFD2FBC00CA4AEA /* Build configuration list for PBXNativeTarget "UIPickerViewTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +521,7 @@
 				39F0D84A1CFD2FBC00CA4AEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39F0D84B1CFD2FBC00CA4AEA /* Build configuration list for PBXNativeTarget "UIPickerViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +530,7 @@
 				39F0D84D1CFD2FBC00CA4AEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
